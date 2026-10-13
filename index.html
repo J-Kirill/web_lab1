@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Лабораторная работа 1</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<table id="layout">
+  <tr>
+    <td id="header" colspan="2">Фомин Кирилл Витальевич, группа P3231, вариант 22725</td>
+  </tr>
+  <tr>
+    <td><canvas id="graph" width="400" height="400"></canvas></td>
+    <td>
+      <form id="point-form">
+  <table id="form-table">
+    <tr>
+      <td>X:</td>
+      <td>
+        <button type="button" class="x-btn" value="-2">-2</button>
+        <button type="button" class="x-btn" value="-1.5">-1.5</button>
+        <button type="button" class="x-btn" value="-1">-1</button>
+        <button type="button" class="x-btn" value="-1.5">-0.5</button>
+        <button type="button" class="x-btn" value="-1.5">0</button>
+        <button type="button" class="x-btn" value="-1.5">0.5</button>
+        <button type="button" class="x-btn" value="-1.5">1</button>
+        <button type="button" class="x-btn" value="-1.5">1.5</button>
+        <button type="button" class="x-btn" value="-1.5">2</button>
+      </td>
+    </tr>
+    <tr>
+      <td>Y:</td>
+      <td><input type="text" name="y" id="y-input"></td>
+    </tr>
+    <tr>
+      <td>R:</td>
+      <td>
+        <label><input type="radio" name="r" value="1"> 1</label>
+        <label><input type="radio" name="r" value="2"> 2</label>
+        <label><input type="radio" name="r" value="3"> 3</label>
+        <label><input type="radio" name="r" value="4"> 4</label>
+        <label><input type="radio" name="r" value="5"> 5</label>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2"><button type="submit">Проверить</button></td>
+    </tr>
+  </table>
+</form>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <table id="results">
+        <thead><tr><th>X</th><th>Y</th><th>R</th><th>Результат</th><th>Время</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </td>
+  </tr>
+</table>
+<script src="js/script.js"></script>
+</body>
+</html>
