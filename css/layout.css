@@ -1,0 +1,19 @@
+#layout {
+    width: 900px;
+    margin: 0 auto;
+    background-color: #5b6a7c;
+}
+
+#header {
+    font-family: fantasy;
+    color: #291111;
+    font-size: 24px;
+    text-align: center;
+    background-color: #4b5a6d;
+    padding: 16px;
+}
+
+#error {
+    color: #c0392b;
+    min-height: 20px;
+}

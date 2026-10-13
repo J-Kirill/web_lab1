@@ -1,0 +1,16 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222;
+    background-color: #bbc1ca;
+    margin: 0;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td, th {
+    padding: 8px;              
+    vertical-align: middle;
+    align-self: center;
+}

@@ -1,0 +1,26 @@
+#results {
+    width: 100%;
+}
+#results td, #results th {
+    padding: 4px;
+    border: 1px solid #999;
+    text-align: center;
+}
+#results th {
+    background-color: #757b83;
+}
+
+#results tbody tr:nth-child(even) {
+    background-color: #9ba5b4;
+}
+
+#results tbody tr:nth-child(odd) {
+    background-color: #a3c2ec;
+}
+
+#results tbody tr:last-child {
+    font-weight: bold;
+}
+
+.hit  { color: #1e8449; }
+.miss { color: #c0392b; }
