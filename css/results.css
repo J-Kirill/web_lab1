@@ -1,5 +1,6 @@
 #results {
     width: 100%;
+    border-collapse: separate;
 }
 #results td, #results th {
     padding: 4px;
@@ -11,14 +12,14 @@
 }
 
 #results tbody tr:nth-child(even) {
-    background-color: #9ba5b4;
+    background-color: #b4ceca;
 }
 
 #results tbody tr:nth-child(odd) {
-    background-color: #a3c2ec;
+    background-color: #aec4e4;
 }
 
-#results tbody tr:last-child {
+#results tbody tr:first-child {
     font-weight: bold;
 }
 

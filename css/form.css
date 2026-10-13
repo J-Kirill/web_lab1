@@ -14,7 +14,7 @@ input[type="radio"] {
     margin: 0 4px 0 10px;
 }
 input[type="radio"]:checked {
-    accent-color: #1e8449;
+    accent-color: green;
 }
 
 button[type="submit"] {
@@ -26,6 +26,12 @@ button[type="submit"] {
     cursor: pointer;
 }
 
+#error {
+    color: #c0392b;
+    margin: 10px;
+    min-height: 20px;
+}
+
 .x-btn {
     padding: 6px 10px;
     margin: 2px;
@@ -35,15 +41,15 @@ button[type="submit"] {
 }
 
 input[type="text"]:focus {
-    outline: 2px solid #2d7ff9;
+    outline: 2px solid green;
 }
 
 .x-btn:hover,
 button[type="submit"]:hover {
-    background-color: #80c7bb;
+    background-color: #2ba549;
 }
 
 .x-btn.selected {
-    background-color: #2d7ff9;
+    background-color: green;
     color: white;
 }

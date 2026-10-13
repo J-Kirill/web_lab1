@@ -1,7 +1,7 @@
 #layout {
-    width: 900px;
+    width: 1200px;
     margin: 0 auto;
-    background-color: #5b6a7c;
+    background-color: #9ba4af;
 }
 
 #header {
@@ -13,7 +13,6 @@
     padding: 16px;
 }
 
-#error {
-    color: #c0392b;
-    min-height: 20px;
+#graph {
+    background-color: white;
 }
