@@ -30,7 +30,7 @@ function validate(xStr, yStr, rStr) {
         return { error: 'Y должен быть числом (например, 1.5)' };
     }
     const y = Number(yClean);
-    if (!(y >= -3 && y <= 3)) {
+    if (!(y > -3 && y < 3)) {
         return { error: 'Y должен быть в диапазоне от -3 до 3' };
     }
     return { x: Number(xStr), y: y, r: Number(rStr) };
@@ -71,6 +71,38 @@ function loadResults() {
         results = [];
     }
     results.forEach(addRow);
+}
+
+function getCssColor(className) {
+    const el = document.createElement('span');
+    el.className = className;
+    el.style.display = 'none';
+    document.body.appendChild(el);
+    const color = getComputedStyle(el).color;
+    document.body.removeChild(el);
+    return color;
+}
+
+function drawPoints(r) {
+    if (!r) return;
+    const cx = canvas.width / 2, cy = canvas.height / 2;
+    const R = 150;
+    const hitColor  = getCssColor('hit');
+    const missColor = getCssColor('miss');
+
+    results
+        .filter(p => p.r === r)
+        .forEach(function (p) {
+            const px = cx + p.x / r * R;
+            const py = cy - p.y / r * R;
+            ctx.beginPath();
+            ctx.arc(px, py, 4, 0, Math.PI * 2);
+            ctx.fillStyle = p.hit ? hitColor : missColor;
+            ctx.fill();
+            ctx.strokeStyle = '#000';
+            ctx.lineWidth = 1;
+            ctx.stroke();
+        });
 }
 
 function drawGraph(r) {
@@ -114,6 +146,8 @@ function drawGraph(r) {
     ctx.fillText('-' + label, cx - R - 4, cy - 6);
     ctx.fillText(half, cx + 6, cy - R / 2);
     ctx.fillText('-' + label, cx + 6, cy + R);
+
+    drawPoints(r);
 }
 
 function getSelectedR() {
@@ -145,6 +179,7 @@ form.addEventListener('submit', function (event) {
     results.push(rec);
     saveResults();
     addRow(rec);
+    drawGraph(v.r);
 });
 
 loadResults();
